@@ -17,6 +17,7 @@ class WorkerConfig:
     heartbeat_interval_s: float = 12.0
     base_url: str = ""
     capabilities: list[str] = field(default_factory=lambda: ["mock-sglang-7b"])
+    gateway_auth_token: str = ""
     deterministic_mode: bool = True
     # On-disk path to the weights file or HF-style directory. If unset, the
     # weight-hash verification step at startup is skipped (Mock engines have

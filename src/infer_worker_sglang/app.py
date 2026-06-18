@@ -66,7 +66,7 @@ class ChatRequest(BaseModel):
     model: str
     messages: list[ChatMessage]
     max_tokens: int = Field(default=64, ge=1, le=8192)
-    customer_nonce: str = Field(pattern=r"^0x?[a-fA-F0-9]{64}$")
+    customer_nonce: str = Field(pattern=r"^(?:0x)?[a-fA-F0-9]{64}$")
     seed: int = Field(default=0, ge=0, le=2**63 - 1)
 
 
